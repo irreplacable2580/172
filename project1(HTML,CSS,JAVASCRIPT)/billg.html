@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Electrical Items Bill Generator</title>
+  <style media="screen">
+     body
+     {
+      background-image: ;
+       background-repeat: no-repeat;
+       background-size: cover;
+     }
+    .box1 {
+      border: 5px solid;
+      border-color:red;
+      width: 50%;
+      padding: 10px;
+      background-color: white;
+      opacity: 0.8;
+    }
+
+    .box1 h1 {
+      text-align: center;
+    }
+    .box1{
+      background-color:white;
+    }
+
+  </style>
+ 
+ 
+</head>
+
+<body>
+  <div class="box1">
+    <h1>Electrical appliances Bill Generator</h1>
+    <form class="" action="" method="post">
+      <table cellspacing = 10px>
+        <tr>
+          <td>
+            <label for="major appliances">Major appliances:</label>
+          </td>
+          <td>
+            <select id="major appliances" name="major appliances">
+              <option value="0">None</option>
+              <option value="60000">Air conditioner - 60000/-</option>
+              <option value="25000">refrigator - 25000/-</option>
+              <option value="20000">washing machine - 20000/-</option>
+              <option value="15000">water heater - 15000/-</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="small appliances">Small appliances:</label>
+          </td>
+          <td>
+            <select id="small appliances" name="small appliances">
+              <option value="0">None</option>
+              <option value="3000">juiciers - 3000/-</option>
+              <option value="5000">electric mixers - 5000/-</option>
+              <option value="5000">electric cooker - 5000/-</option>
+              <option value="6000">toaster - 6000/-</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="consumer electronics">consumer electronics:</label>
+          </td>
+          <td>
+            <select id="small appliances1" name="consumer appliances">
+              <option value="0">None</option>
+              <option value="10000">radio receivers - 10000/-</option>
+              <option value="45000">tv sets - 45000/-</option>
+              <option value="10000">cd&vcr's - 10000/-</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" name="button" onclick="f()">submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Your total is:</p>
+          </td>
+          <td>
+            <p id="s"></p></td><td>
+            <p id="c"></p></td><td>
+            <p id="b"></p></td><td>
+            <p id="t"></p></td><td>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+      </form>
+    </form>
+</body>
+<script type="text/javascript">
+    function f() {
+
+      const v1 = parseFloat(document.getElementById("major appliances").value);
+      const v2 = parseFloat(document.getElementById("small appliances").value);
+    var v3 = parseFloat(document.getElementById("small appliances1").value);
+       const v4 = v1 + v2 + v3;
+      document.getElementById('s').innerHTML = v1;
+      document.getElementById('c').innerHTML = v2;
+      document.getElementById('b').innerHTML = v3;
+      document.getElementById('t').innerHTML = v4;
+    }
+  </script>
+
+</html>
+
